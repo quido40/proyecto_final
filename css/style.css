@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*COLOR DE FONDO**/
+    background: var(--mainGrey);
+}
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+
+/*---------------------------------------
+   CARGANDO BURBUJA           
+-----------------------------------------*/
+.spn_hol {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 50000;
+    opacity: 1;
+     -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.spinner {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 50%;
+    margin-left: -35px;
+    height: 24px;
+    width: 70px;
+    text-align: center;
+    display: block;
+}
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+
+/*---------------------------------------
+   ESTIOS COMUNES (estilos de fondo)             
+-----------------------------------------*/
+.section_title {
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+.section_title h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    color: #333;
+    font-size: 30px;
+    font-weight: 400;
+}
+.section_title h2:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 60px;
+    height: 1px;
+    background-color: #f39c12;
+    left: 50%;
+    margin-left: -30px;
+}
+.section_title p {
+    text-align: center;
+    margin-top: 45px;
+    color: #333;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+/*---------------------------------------
+                      MENU             
+-----------------------------------------*/
+
+.header h2 {
+    height: 0px;
+    margin: 0px;
+}
+/*****/
+.navbar {
+    margin-top: -100px
+}
+
+.navbar-brand {
+    padding: 9px 15px;
+}
+/****/
+@media(min-width:768px) {
+    .navbar-default {
+        background-color: transparent;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #B5B5B5;
+        font-family: 'Raleway', sans-serif;
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+        color: #f39c12;
+    }
+    .navbar-default .navbar-nav>li>a:focus {
+        color: #B5B5B5;
+    }
+    .navbar-default {
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+        z-index: 110;
+    }
+    .navbar-brand img {
+        padding-top: 25px;
+        height: 45px;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+    .navbar-default .navbar-nav>li>a {
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+    .navbar-nav>li>a {
+        padding-top: 45px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-brand img {} .navbar-default {
+    background-color: #fff !important;
+    }
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    background: transparent;
+    color: #f39c12;
+}
+.header {
+    background: url(../img/img1.jpg);
+    /*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+}
+.header .section_overlay {
+    background-color: rgba(33, 33, 33, .75);
+}
+
+.home_text{
+    text-align: left;
+}
+.home-iphone{
+    text-align: right;
+}
+.home-iphone img{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    .home-iphone{
+        display: none;
+    }
+    .home_text{
+        text-align: center;
+    }
+
+}
+.home_text h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 45px;
+    padding-top: 30px
+}
+.home_text p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 28px;
+    margin-top: 0px;
+    font-weight: 300;
+}
+
+/*---------------------------------------
+   INGRESAR
+-----------------------------------------*/
+.tuor,
+.tuor:focus,
+tuor:active,
+tuor:visited {
+    color: #A9ADB0;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 500;
+    background: transparent;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    /*BORDE DEL CUADRO*/
+    border: 1px solid #e67e22;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-right: 12px;
+
+    margin-top: 230px;
+    /*margin-left: 515px;*/
+}
+/*COLOR DE CAMBIO*/
+.tuor:hover {
+    color: #fff;
+}
+.tuor i {
+    font-size: 20px;
+    padding-left: 5px;
+    color: #f39c12;
+}
+
+/*---------------------------------------
+             PALETA DE ICONOS              
+-----------------------------------------*/
+.social_icons {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+.social_icons ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.social_icons ul li {
+    list-style: none;
+    display: inline;
+    padding-left: 10px
+}
+.social_icons ul li a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #9d9d9d;
+    border-radius: 3px;
+    width: 45px;
+    height: 45px;
+    line-height: 49px;
+    color: #9d9d9d;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.social_icons ul li a i {
+    font-size: 20px;
+}
+.social_icons ul li a:hover {
+    background: #f39c12;
+    border: 1px solid #f39c12;
+    color: #fff
+}
+
+
+/*---------------------------------------
+           COLOR DEL PIE DEL MENU             
+-----------------------------------------*/
+.copyright {
+    background-color: #1A1D22;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 3px solid #f39c12;
+}
+.copyright h2 {
+    height: 0px;
+    margin: 0px;
+}
+
+/*---------------------------------------
+           HACIA ARIBA            
+-----------------------------------------*/
+.scroll_top {
+    text-align: right;
+}
+.scroll_top a {
+    background: #f39c12;
+    padding: 25px;
+}
+.scroll_top a i {
+    color: #fff;
+    font-size: 25px;
+}
+
+/*---------------------------------------
+           IMAGENES          
+-----------------------------------------*/
+img {
+  height: 200px;
+  height: 300px;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;  
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/*icono*/
+.store-img {
+  transition: all 1s ease-in-out;
+}
+/*tiempo de agandar */
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+/*funcionamiento de agrandar*/
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainYellow);
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+/*cambia de color al momento de precionar*/
+.store-item-icon:hover {
+  color: var(--mainWhite);
+}
+
+/*---------------------------------------
+           ESTILOS COMUNES           
+-----------------------------------------*/
+.section_title {
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+.section_title h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    color: #333;
+    font-size: 30px;
+    font-weight: 400;
+}
+.section_title h2:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 60px;
+    height: 1px;
+    background-color: #f39c12;
+    left: 50%;
+    margin-left: -30px;
+}
+.section_title h5 {
+  text-align: center;
+}
+.section_title p {
+    text-align: center;
+    margin-top: 45px;
+    color: #333;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+/*---------------------------------------
+       BOTON DE EVIAR             
+-----------------------------------------*/
+.subscribe_form {
+    text-align: center;
+    padding-top: 30px;
+}
+.subscribe_form .form-group {} .subscribe_form .form-control {
+    background: transparent;
+    border: 1px solid #575b63;
+    border-radius: 0px;
+    height: 45px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    color: #aeaeae;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.subscribe_form .form-control:focus {
+    background: transparent;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: none;
+}
+.subs-btn,
+.subs-btn:active,
+.subs-btn:focus,
+.subs-btn:visited {
+    width: 200px;
+    background: transparent;
+    border: 1px solid #f39c12;
+    border-radius: 4px;
+    height: 45px;
+    margin-left: 0px;
+    margin-bottom: 1px;
+    color: #f39c12;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    outline: 0px !important;
+}
+.subs-btn:hover {
+    background-color: #f39c12;
+    color: #fff;
+    border-color: #f39c12;
+}
+@media (min-width: 300px) {
+    .subscribe_form .form-control {
+        width: 100%
+    }
+}
+
+/*---------------------------------------
+           CONTENEDOR DE COMPRAS           
+-----------------------------------------*/
+
+/* banner  donde se guarda las compras*/
+.max-height {
+  min-height: calc(30vh - 20px);
+  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), 
+    url("img/headerBcg.jpeg") center/cover fixed no-repeat;
+  position: relative;
+}
